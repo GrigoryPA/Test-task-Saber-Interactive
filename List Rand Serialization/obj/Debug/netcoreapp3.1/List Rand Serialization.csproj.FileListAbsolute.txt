@@ -1,0 +1,14 @@
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.exe
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.deps.json
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.runtimeconfig.json
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.runtimeconfig.dev.json
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.dll
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\bin\Debug\netcoreapp3.1\List Rand Serialization.pdb
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.csproj.AssemblyReference.cache
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.AssemblyInfoInputs.cache
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.AssemblyInfo.cs
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.dll
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.pdb
+C:\Users\Admin\Git\Test-task-Saber-Interactive\List Rand Serialization\obj\Debug\netcoreapp3.1\List Rand Serialization.genruntimeconfig.cache
