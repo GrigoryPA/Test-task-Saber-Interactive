@@ -48,41 +48,40 @@ namespace ListRandSerialization
         {
             try
             {
-                using (BinaryReader bin = new BinaryReader(s)) // начинаем работы с файлом
+                using BinaryReader bin = new BinaryReader(s); // начинаем работы с файлом
+
+                int len = bin.PeekChar() > -1 ? bin.ReadInt32() : -1; // считываем размер списка
+                if (len < 0) // если размер списка не задан
                 {
-                    int len = bin.PeekChar() > -1 ? bin.ReadInt32() : -1; // считываем размер списка
-                    if (len < 0) // если размер списка не задан
-                    {
-                        throw new Exception("File is empty"); // файл пуст
-                    }
-                    
-                    List<Tuple<ListNode, int>> arr = new List<Tuple<ListNode, int>>(len); // создаем список элементов ранд-списка и индексов рандомных элементов
-                    ListNode temp = new ListNode(); // создаем первый пустой узел
-                    Count = 0; // размер ранд-списка = 0
-                    Head = temp; // голова ранд-списка равна первому узлу
+                    throw new Exception("File is empty"); // файл пуст
+                }
 
-                    while (bin.PeekChar() > -1) // пока есть что считывать                                          // N
-                    {
-                        String data = bin.ReadString(); // считали данные
-                        int randomId = bin.ReadInt32(); // считали индекс рандомного эл-та
-                        Count++; // увеличили количество элементов в ранд-списке
+                List<Tuple<ListNode, int>> arr = new List<Tuple<ListNode, int>>(len); // создаем список элементов ранд-списка и индексов рандомных элементов
+                ListNode temp = new ListNode(); // создаем первый пустой узел
+                Count = 0; // размер ранд-списка = 0
+                Head = temp; // голова ранд-списка равна первому узлу
 
-                        temp.Data = data; // инициализируем узел ранд-списка
-                        ListNode next = new ListNode(); // создаем следующий узел
-                        temp.Next = next;
-                        next.Prev = temp;
-                        arr.Add(new Tuple<ListNode, int>(temp, randomId)); // добавляем узел и ранд-индекс в список // 1
+                while (bin.PeekChar() > -1) // пока есть что считывать                                          // N
+                {
+                    String data = bin.ReadString(); // считали данные
+                    int randomId = bin.ReadInt32(); // считали индекс рандомного эл-та
+                    Count++; // увеличили количество элементов в ранд-списке
 
-                        temp = next; // итерируемся на следующий узел
-                    }
+                    temp.Data = data; // инициализируем узел ранд-списка
+                    ListNode next = new ListNode(); // создаем следующий узел
+                    temp.Next = next;
+                    next.Prev = temp;
+                    arr.Add(new Tuple<ListNode, int>(temp, randomId)); // добавляем узел и ранд-индекс в список // 1
 
-                    Tail = temp.Prev; // хвост ранд-списка
-                    Tail.Next = null; // занулили указатель хвоста
+                    temp = next; // итерируемся на следующий узел
+                }
 
-                    foreach (var n in arr) // итерируемся по созданному списку                                      // N
-                    {
-                        n.Item1.Rand = n.Item2 < 0 ? null : arr[n.Item2].Item1; // берем из списка по индексу нужный ранд-узел
-                    }
+                Tail = temp.Prev; // хвост ранд-списка
+                Tail.Next = null; // занулили указатель хвоста
+
+                foreach (var n in arr) // итерируемся по созданному списку                                      // N
+                {
+                    n.Item1.Rand = n.Item2 < 0 ? null : arr[n.Item2].Item1; // берем из списка по индексу нужный ранд-узел
                 }
             }
             catch (Exception e)
